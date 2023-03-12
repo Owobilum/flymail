@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .btn_contained {
+    @apply before:content-[''] before:absolute before:right-0  before:top-0  before:bottom-0  before:w-[100%] before:bg-primary hover:before:w-0
+    before:-z-10  before:rounded-full  before:transition-all border border-primary relative rounded-full bg-transparent;
+  }
+}
 
 * {
   box-sizing: border-box;
