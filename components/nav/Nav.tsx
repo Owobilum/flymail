@@ -7,7 +7,7 @@ const Nav: FC<Props> = (props) => {
   const renderedLinks = links.map(({ name }) => (
     <li
       key={name}
-      className="cursor-pointer hover:text-primary text-center lg:text-start"
+      className="cursor-pointer  text-center hover:text-primary lg:text-start"
     >
       {name}
     </li>
@@ -15,7 +15,7 @@ const Nav: FC<Props> = (props) => {
 
   return (
     <nav {...props}>
-      <ul className="flex flex-col lg:flex-row  gap-8 xl:gap-10 text-lg font-lato text-offWhite capitalize py-12 lg:py-0">
+      <ul className="flex flex-col gap-8  py-12 font-lato text-lg capitalize text-offWhite lg:flex-row lg:py-0 xl:gap-10">
         {renderedLinks}
       </ul>
     </nav>

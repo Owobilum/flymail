@@ -10,12 +10,12 @@ const Drawer: FC = () => {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className={`lg:hidden fixed top-[6.25rem] right-0 left-0 bg-secondary_light overflow-hidden flex items-center flex-col`}
+      className="fixed top-[6.25rem] right-0 left-0 flex flex-col items-center overflow-hidden bg-secondary_light lg:hidden"
     >
       <Nav />
       <button
-        className="btn_contained md:hidden text-lg capitalize w-[8.5625rem] h-11 lg:w-[8.9625rem] lg:h-14 text-white 
-          font-openSans font-semibold"
+        className="btn_contained h-11 w-[8.5625rem] font-openSans text-lg font-semibold capitalize text-white md:hidden 
+          lg:h-14 lg:w-[8.9625rem]"
       >
         sign up
       </button>
