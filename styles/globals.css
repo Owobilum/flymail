@@ -6,9 +6,13 @@
 @tailwind utilities;
 
 @layer utilities {
-  .btn_contained {
-    @apply before:content-[''] before:absolute before:right-0  before:top-0  before:bottom-0  before:w-[100%] before:bg-primary hover:before:w-0
-    before:-z-10  before:rounded-full  before:transition-all border border-primary relative rounded-full bg-transparent;
+  /* .btn_contained {
+    @apply relative rounded-full border  border-primary  bg-transparent  before:absolute before:right-0 before:top-0
+    before:bottom-0  before:-z-10  before:w-[100%] before:rounded-full before:bg-primary before:transition-all before:content-[''] hover:before:w-0;
+  } */
+  .btn {
+    @apply relative inline-block rounded-full  border  bg-transparent  font-openSans text-lg font-semibold capitalize before:absolute
+    before:right-0  before:top-0   before:bottom-0 before:-z-10 before:rounded-full before:transition-all before:content-[''] md:text-xl;
   }
 }
 

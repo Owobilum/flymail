@@ -15,7 +15,7 @@ const Nav: FC<Props> = (props) => {
 
   return (
     <nav {...props}>
-      <ul className="flex flex-col gap-8  py-12 font-lato text-lg capitalize text-offWhite lg:flex-row lg:py-0 xl:gap-10">
+      <ul className="flex flex-col gap-8  py-12 font-lato text-lg capitalize text-off_white lg:flex-row lg:py-0 xl:gap-10">
         {renderedLinks}
       </ul>
     </nav>

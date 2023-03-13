@@ -2,6 +2,7 @@ import { FC, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence } from 'framer-motion'
 
+import Button from '@/components/button'
 import Container from '@/components/container'
 import Drawer from '@/components/drawer'
 import logo from '@/public/images/logo.svg'
@@ -16,12 +17,13 @@ const Header: FC = () => {
         <Image alt="flymail_logo" src={logo} className="block cursor-pointer" />
         <Nav className="hidden lg:block" />
         <div className="flex gap-12">
-          <button
+          {/* <button
             className="btn_contained hidden h-11 w-[8.5625rem] font-openSans text-lg font-semibold capitalize text-white md:block 
           lg:h-14 lg:w-[8.9625rem]"
           >
             sign up
-          </button>
+          </button> */}
+          <Button className="hidden md:inline-block">sign up</Button>
           <button
             className="grid h-[3.125rem] w-[3.125rem] place-items-center rounded-lg border border-white lg:hidden"
             onClick={() => setIsOpen((prev) => !prev)}
