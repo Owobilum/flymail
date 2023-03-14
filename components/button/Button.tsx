@@ -20,8 +20,8 @@ const COLOR_SCHEME_MAP = {
 
 const SIZE_MAP = {
   sm: 'h-11 w-[8.5625rem] lg:h-14 lg:w-[8.9625rem]',
-  md: 'h-11 w-[9.45rem] lg:h-14 lg:w-[10.4437rem]',
-  lg: 'h-11 w-[9.7744rem] lg:h-14 lg:w-[10.8087rem]',
+  md: 'h-11 w-[9.45rem] lg:h-16 lg:w-[10.4437rem]',
+  lg: 'h-11 w-[9.7744rem] lg:h-16 lg:w-[10.8087rem]',
 }
 
 const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(function _Button(
