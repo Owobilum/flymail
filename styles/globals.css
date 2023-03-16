@@ -14,6 +14,9 @@
     @apply relative rounded-full  border  bg-transparent  font-openSans text-lg font-semibold capitalize before:absolute
     before:right-0  before:top-0   before:bottom-0 before:-z-10 before:rounded-full before:transition-all before:content-[''] md:text-xl;
   }
+  .pause-animations-on-children-on-hover:hover * {
+    animation-play-state: paused;
+  }
 }
 
 * {

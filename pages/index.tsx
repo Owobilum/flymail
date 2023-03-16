@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 
 import Header from '@/components/header'
 import Hero from '@/components/sections/homepage/hero'
+import EngageProspects from '@/components/sections/homepage/engage_prospects/EngageProspects'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <main>
         <Header />
         <Hero />
+        <EngageProspects />
       </main>
     </>
   )

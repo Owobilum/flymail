@@ -17,8 +17,8 @@ const Header: FC = () => {
         <Image alt="flymail_logo" src={logo} className="block cursor-pointer" />
         <Nav className="hidden lg:block" />
         <div className="flex gap-12">
-          <Button className="hidden md:inline-block" size="sm">
-            sign ups
+          <Button className="hidden text-white md:inline-block" size="sm">
+            sign up
           </Button>
           <button
             className="grid h-[3.125rem] w-[3.125rem] place-items-center rounded-lg border border-white lg:hidden"

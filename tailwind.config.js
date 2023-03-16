@@ -18,6 +18,15 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         openSans: ['Open Sans', 'sans-serif'],
       },
+      keyframes: {
+        marquee: {
+          '0%': { left: 0 },
+          '100%': { left: '-100%' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 15s linear infinite',
+      },
     },
   },
   plugins: [],

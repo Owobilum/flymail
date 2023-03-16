@@ -14,7 +14,9 @@ const Drawer: FC = () => {
       className="fixed top-[6.25rem] right-0 left-0 z-50 flex flex-col items-center overflow-hidden bg-secondary_light lg:hidden"
     >
       <Nav />
-      <Button size="sm">sign up</Button>
+      <Button size="sm" className="text-white">
+        sign up
+      </Button>
     </motion.div>
   )
 }

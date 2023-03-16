@@ -14,8 +14,8 @@ const VARIANT_MAPS = {
 }
 
 const COLOR_SCHEME_MAP = {
-  primary: 'text-white border-primary hover:text-white',
-  white: 'text-white border-white hover:border-primary',
+  primary: 'border-primary hover:text-white',
+  white: 'border-white hover:border-primary',
 }
 
 const SIZE_MAP = {

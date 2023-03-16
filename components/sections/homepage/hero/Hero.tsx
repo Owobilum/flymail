@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { motion } from 'framer-motion'
 
 import AnimatedLines from '@/components/icons/animated_lines'
@@ -13,16 +13,15 @@ import {
   dodgeLeft,
   dodgeTopLeft,
 } from '@/utils/animations'
+import useButtonAnimation from '@/components/hooks/useButtonAnimation'
 
 const MotionButton = motion(Button)
 
 const Hero: FC = () => {
-  const [movement, setMovement] = useState(1)
-
-  const handleCurrentMovement = () => setMovement(Math.floor(Math.random() * 3))
+  const { movement, handleCurrentMovement } = useButtonAnimation()
 
   return (
-    <Container className="bg-secondary py-20">
+    <Container className=" bg-secondary py-20">
       <section className="flex flex-col gap-4 lg:flex-row lg:gap-8">
         <div className="flex flex-col justify-center lg:max-w-[400px] xl:max-w-full xl:flex-1">
           <h1 className="relative font-openSans text-[2.75rem] font-bold capitalize leading-[3.375rem] text-white lg:text-[4.5rem] lg:leading-[4.9rem] xl:text-[5.3125rem] xl:leading-[5.9375rem]">
@@ -36,7 +35,7 @@ const Hero: FC = () => {
 
           <p>
             <MotionButton
-              className="mr-1 w-32 text-sm hover:border-white sm:mb-0  lg:mr-4"
+              className="my-1 mr-1 w-32 text-sm text-white hover:border-white  sm:mb-0 lg:mr-4"
               variant="contained"
               size="md"
               onMouseLeave={handleCurrentMovement}
@@ -52,7 +51,7 @@ const Hero: FC = () => {
               get ready
             </MotionButton>
             <MotionButton
-              className="ml-1 w-32 border-white text-sm hover:border-primary sm:mb-0 lg:ml-4"
+              className="my-1 ml-1 w-32 border-white text-sm text-white hover:border-primary sm:mb-0 lg:ml-4"
               variant="outlined"
               colorScheme="primary"
               size="lg"
