@@ -5,6 +5,7 @@ import Header from '@/components/header'
 import Hero from '@/components/sections/homepage/hero'
 import EngageProspects from '@/components/sections/homepage/engage_prospects'
 import Create from '@/components/sections/homepage/create'
+import Insights from '@/components/sections/homepage/insights'
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <Hero />
         <EngageProspects />
         <Create />
+        <Insights />
       </main>
     </>
   )
