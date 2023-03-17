@@ -13,7 +13,7 @@ import {
   dodgeLeft,
   dodgeTopLeft,
 } from '@/utils/animations'
-import useButtonAnimation from '@/components/hooks/useButtonAnimation'
+import useButtonAnimation from '@/hooks/useMovement'
 
 const MotionButton = motion(Button)
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 
 import Button from '@/components/button'
-import useButtonAnimation from '@/components/hooks/useButtonAnimation'
+import useMovement from '@/hooks/useMovement'
 import { dodgeBottom, dodgeLeft, dodgeTopLeft } from '@/utils/animations'
 import engage from '@/public/images/engage.svg'
 import engage2 from '@/public/images/engage2.svg'
@@ -13,7 +13,7 @@ const MotionButton = motion(Button)
 const MotionImage = motion(Image)
 
 const MainContent: FC = () => {
-  const { movement, handleCurrentMovement } = useButtonAnimation()
+  const { movement, handleCurrentMovement } = useMovement()
 
   const imgVariants: Variants = {
     animate: {

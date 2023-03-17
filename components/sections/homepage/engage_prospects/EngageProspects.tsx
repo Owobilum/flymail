@@ -12,7 +12,7 @@ const companies = [gumroadImg, squareSpaceImg, cultureAmpImg, leaderImg]
 
 const EngageProspects: FC = () => {
   return (
-    <Container className="py-20">
+    <Container className="py-5 lg:py-10">
       <section className="flex flex-col gap-4 md:flex-row md:gap-0 ">
         <div className="font-lato lg:min-w-[22.5rem]">
           <span className="block text-[2rem] font-bold lg:text-[2.5rem] ">

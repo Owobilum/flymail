@@ -3,7 +3,8 @@ import { NextPage } from 'next'
 
 import Header from '@/components/header'
 import Hero from '@/components/sections/homepage/hero'
-import EngageProspects from '@/components/sections/homepage/engage_prospects/EngageProspects'
+import EngageProspects from '@/components/sections/homepage/engage_prospects'
+import Create from '@/components/sections/homepage/create'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
         <Header />
         <Hero />
         <EngageProspects />
+        <Create />
       </main>
     </>
   )
