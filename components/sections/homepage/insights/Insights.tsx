@@ -67,7 +67,7 @@ const Insights: FC = () => {
             variant="outlined"
             colorScheme="primary"
             size="lg"
-            className="text-primary"
+            className="text-primary hover:text-white"
             onMouseLeave={handleCurrentMovement}
             variants={
               movement === 0

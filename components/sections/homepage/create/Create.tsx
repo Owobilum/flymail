@@ -12,7 +12,7 @@ const MotionButton = motion(Button)
 
 function Create(): ReactElement {
   const { scrollY } = useScroll()
-  const rotate = useTransform(scrollY, [0, 400], [0, 360], { clamp: false })
+  const rotate = useTransform(scrollY, [0, 2000], [0, 360], { clamp: false })
   const { movement, handleCurrentMovement } = useMovement()
 
   return (
@@ -30,7 +30,7 @@ function Create(): ReactElement {
             variant="outlined"
             colorScheme="primary"
             size="lg"
-            className="text-primary"
+            className="text-primary hover:text-white"
             onMouseLeave={handleCurrentMovement}
             variants={
               movement === 0
