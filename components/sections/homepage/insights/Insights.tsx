@@ -39,14 +39,14 @@ const Insights: FC = () => {
             <Image src={insightsImg} alt="engagements" />
           </motion.div>
           <motion.div
-            className="absolute -bottom-12 -right-6 h-[3.625rem] w-[7.0625rem] bg-transparent shadow-xl lg:h-[9rem] lg:w-[12.875rem]"
+            className="absolute -bottom-6 -right-6 h-[3.625rem] w-[7.0625rem] bg-transparent shadow-xl lg:-bottom-12 lg:h-[9rem] lg:w-[12.875rem]"
             variants={engagementVariants2}
             animate="animate"
           >
             <Image src={insights2Img} alt="engagements" />
           </motion.div>
         </div>
-        <div className="space-y-4 lg:space-y-10">
+        <div className="mt-4 space-y-4 lg:mt-0 lg:space-y-10">
           <h2 className="font-openSans text-3xl font-bold text-black lg:text-[3.325rem] lg:leading-[3.75rem]">
             Insights To Drive Revenue Growth{' '}
           </h2>

@@ -6,6 +6,7 @@ import Hero from '@/components/sections/homepage/hero'
 import EngageProspects from '@/components/sections/homepage/engage_prospects'
 import Create from '@/components/sections/homepage/create'
 import Insights from '@/components/sections/homepage/insights'
+import Integrations from '@/components/sections/homepage/integrations'
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <EngageProspects />
         <Create />
         <Insights />
+        <Integrations />
       </main>
     </>
   )
