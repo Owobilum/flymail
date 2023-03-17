@@ -39,7 +39,7 @@ const Insights: FC = () => {
             <Image src={insightsImg} alt="engagements" />
           </motion.div>
           <motion.div
-            className="absolute bottom-4 -right-6 h-[3.625rem] w-[7.0625rem] bg-transparent shadow-xl"
+            className="absolute -bottom-12 -right-6 h-[3.625rem] w-[7.0625rem] bg-transparent shadow-xl lg:h-[9rem] lg:w-[12.875rem]"
             variants={engagementVariants2}
             animate="animate"
           >
