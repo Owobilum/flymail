@@ -24,7 +24,7 @@ const Insights: FC = () => {
         <div className="relative w-fit">
           <div className="grid w-full place-items-center overflow-hidden rounded-xl bg-[#FFC0AC] md:h-[21.0625rem] md:w-[386px]">
             <MotionImage
-              alt="excited_girl"
+              alt="zigzag_bg"
               src={zigzagImg}
               variants={imgVariants}
               whileInView="animate"

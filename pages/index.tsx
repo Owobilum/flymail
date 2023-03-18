@@ -8,6 +8,7 @@ import Create from '@/components/sections/homepage/create'
 import Insights from '@/components/sections/homepage/insights'
 import Integrations from '@/components/sections/homepage/integrations'
 import ControlUpdates from '@/components/sections/homepage/control_updates'
+import PowerAchievements from '@/components/sections/homepage/power_achievements'
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <Insights />
         <Integrations />
         <ControlUpdates />
+        <PowerAchievements />
       </main>
     </>
   )
