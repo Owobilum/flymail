@@ -2,6 +2,7 @@ import { FC, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
+import Achievement from './Achievement'
 import Container from '@/components/container'
 import LightBox from '@/components/lightbox'
 import waveImg from '@/public/images/water_wave.svg'
@@ -9,7 +10,6 @@ import starIcon from '@/public/images/icons/star.svg'
 import completeIcon from '@/public/images/icons/complete.svg'
 import userIcon from '@/public/images/icons/user.svg'
 import ribbonIcon from '@/public/images/icons/ribbon.svg'
-import Achievement from './Achievement'
 
 const PowerAchievements: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
