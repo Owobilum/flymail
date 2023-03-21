@@ -22,7 +22,7 @@ const Hero: FC = () => {
   const { movement, handleCurrentMovement } = useButtonAnimation()
 
   return (
-    <Container className="bg-secondary py-8 xl:h-[88vh] 2xl:h-full">
+    <Container className="bg-secondary py-8 xl:h-[88vh] 3xl:h-full 3xl:py-24">
       <section className="flex  flex-col gap-4 lg:flex-row lg:gap-8">
         <div className="flex flex-col justify-center lg:max-w-[25rem] xl:max-w-full xl:flex-1">
           <motion.h1

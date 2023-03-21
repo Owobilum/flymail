@@ -12,7 +12,7 @@ const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Container className="relative border-b border-secondary_light bg-secondary xl:h-[12vh] 2xl:h-full">
+    <Container className="relative border-b border-secondary_light bg-secondary xl:h-[12vh] 3xl:h-full">
       <header className="flex  items-center justify-between py-[1.5625rem]">
         <Image alt="flymail_logo" src={logo} className="block cursor-pointer" />
         <Nav className="hidden lg:block" />

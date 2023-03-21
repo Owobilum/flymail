@@ -18,6 +18,9 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         openSans: ['Open Sans', 'sans-serif'],
       },
+      screens: {
+        '3xl': '1700px',
+      },
       keyframes: {
         marquee: {
           '0%': { left: 0 },
