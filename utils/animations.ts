@@ -93,3 +93,10 @@ export const opacityAnimation: Variants = {
     opacity: 1,
   },
 }
+
+export const scaleAnimation: Variants = {
+  initial: {
+    scale: 0,
+  },
+  final: { scale: 1 },
+}

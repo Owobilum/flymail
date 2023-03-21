@@ -2,7 +2,12 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ReactElement } from 'react'
 import Image from 'next/image'
 
-import { dodgeBottom, dodgeLeft, dodgeTopLeft } from '@/utils/animations'
+import {
+  dodgeBottom,
+  dodgeLeft,
+  dodgeTopLeft,
+  fromBottomAnimation,
+} from '@/utils/animations'
 import Button from '@/components/button'
 import useMovement from '@/hooks/useMovement'
 import Container from '@/components/container'
@@ -19,33 +24,62 @@ function Create(): ReactElement {
     <Container className="py-5 lg:py-10">
       <section className="flex flex-col items-center gap-8  lg:flex-row lg:gap-32">
         <div className="space-y-4 lg:space-y-10">
-          <h2 className="font-openSans text-3xl font-bold text-black lg:text-[3.325rem] lg:leading-[3.75rem]">
+          <motion.h2
+            className="font-openSans text-3xl font-bold text-black lg:text-[3.325rem] lg:leading-[3.75rem]"
+            variants={fromBottomAnimation}
+            initial="initial"
+            whileInView="final"
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Create Once, Share Everywhere.{' '}
-          </h2>
-          <p className="font-lato text-[#5E5D5D] lg:text-lg">
+          </motion.h2>
+          <motion.p
+            className="font-lato text-[#5E5D5D] lg:text-lg"
+            variants={fromBottomAnimation}
+            initial="initial"
+            whileInView="final"
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Easily Create Reusable Payment Links That You Can Share With Your
             Customers Through Email, Text Message, Social Media.
-          </p>
-          <MotionButton
-            variant="outlined"
-            colorScheme="primary"
-            size="lg"
-            className="text-primary hover:text-white"
-            onMouseLeave={handleCurrentMovement}
-            variants={
-              movement === 0
-                ? dodgeBottom
-                : movement === 1
-                ? dodgeLeft
-                : dodgeTopLeft
-            }
-            whileHover="animate"
+          </motion.p>
+          <motion.p
+            variants={fromBottomAnimation}
+            initial="initial"
+            whileInView="final"
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
           >
-            learn more
-          </MotionButton>
+            <MotionButton
+              variant="outlined"
+              colorScheme="primary"
+              size="lg"
+              className="text-primary hover:text-white"
+              onMouseLeave={handleCurrentMovement}
+              variants={
+                movement === 0
+                  ? dodgeBottom
+                  : movement === 1
+                  ? dodgeLeft
+                  : dodgeTopLeft
+              }
+              whileHover="animate"
+            >
+              learn more
+            </MotionButton>
+          </motion.p>
         </div>
         <div className="relative w-fit">
-          <div className="grid w-full place-items-center overflow-hidden  rounded-xl bg-[#BBD7E7] md:h-[37rem] md:w-[37rem] lg:h-[32rem] lg:w-[32rem] xl:h-[37rem] xl:w-[37rem]">
+          <motion.div
+            className="grid w-full place-items-center overflow-hidden  rounded-xl bg-[#BBD7E7] md:h-[37rem] md:w-[37rem] lg:h-[32rem] lg:w-[32rem] xl:h-[37rem] xl:w-[37rem]"
+            variants={fromBottomAnimation}
+            initial="initial"
+            whileInView="final"
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <motion.div
               style={{ rotate }}
               className="grid h-[95%] w-[95%] place-items-center rounded-full bg-[#8cbfdc]/50"
@@ -55,7 +89,7 @@ function Create(): ReactElement {
                 <Image alt="icons" src={iconsImg} />
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Container>

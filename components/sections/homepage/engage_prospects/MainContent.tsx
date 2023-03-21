@@ -4,7 +4,12 @@ import { motion, Variants } from 'framer-motion'
 
 import Button from '@/components/button'
 import useMovement from '@/hooks/useMovement'
-import { dodgeBottom, dodgeLeft, dodgeTopLeft } from '@/utils/animations'
+import {
+  dodgeBottom,
+  dodgeLeft,
+  dodgeTopLeft,
+  fromBottomAnimation,
+} from '@/utils/animations'
 import engage from '@/public/images/engage.svg'
 import engage2 from '@/public/images/engage2.svg'
 import girlImg from '@/public/images/excited-blond-girl.png'
@@ -48,9 +53,32 @@ const MainContent: FC = () => {
     },
   }
 
+  // const imgBoxVariants: Variants = {
+  //   initial: { height: 0 },
+  //   final: { height: 400, transition: { duration: 1.5, delay: 4 } },
+  // }
+
+  const imgBoxVariants: Variants = {
+    initial: {
+      transform: 'translateY(10%)',
+      opacity: 0,
+    },
+    final: {
+      transform: 'translateY(0%)',
+      opacity: 1,
+    },
+  }
+
   return (
     <div className="flex flex-col items-center gap-8 pt-24 lg:flex-row lg:gap-32 lg:pt-36">
-      <div className="relative w-fit">
+      <motion.div
+        className="relative w-fit"
+        variants={fromBottomAnimation}
+        initial="initial"
+        whileInView="final"
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="grid w-full place-items-center overflow-hidden rounded-xl bg-[#F6E186] md:h-[30.75rem] md:w-[32.5rem]">
           <MotionImage
             alt="excited_girl"
@@ -74,33 +102,55 @@ const MainContent: FC = () => {
         >
           <Image src={engage2} alt="engagements" />
         </motion.div>
-      </div>
+      </motion.div>
 
       <div className="space-y-4 lg:space-y-10">
-        <h2 className="font-openSans text-3xl font-bold text-black lg:text-[3.325rem] lg:leading-[3.75rem]">
+        <motion.h2
+          className="font-openSans text-3xl font-bold text-black lg:text-[3.325rem] lg:leading-[3.75rem]"
+          variants={fromBottomAnimation}
+          initial="initial"
+          whileInView="final"
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+        >
           Engage Your Prospects Wherever They Are.
-        </h2>
-        <p className="font-lato text-[#5E5D5D] lg:text-lg">
+        </motion.h2>
+        <motion.p
+          className="font-lato text-[#5E5D5D] lg:text-lg"
+          variants={fromBottomAnimation}
+          initial="initial"
+          whileInView="final"
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Saasant Replaces All Those Apps And Complicated Invoicing Tools That
           Made It Challenging To Keep Track Of All Your Customers.
-        </p>
-        <MotionButton
-          variant="outlined"
-          colorScheme="primary"
-          size="lg"
-          className="text-primary hover:text-white"
-          onMouseLeave={handleCurrentMovement}
-          variants={
-            movement === 0
-              ? dodgeBottom
-              : movement === 1
-              ? dodgeLeft
-              : dodgeTopLeft
-          }
-          whileHover="animate"
+        </motion.p>
+        <motion.div
+          variants={fromBottomAnimation}
+          initial="initial"
+          whileInView="final"
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
         >
-          learn more
-        </MotionButton>
+          <MotionButton
+            variant="outlined"
+            colorScheme="primary"
+            size="lg"
+            className="text-primary hover:text-white"
+            onMouseLeave={handleCurrentMovement}
+            variants={
+              movement === 0
+                ? dodgeBottom
+                : movement === 1
+                ? dodgeLeft
+                : dodgeTopLeft
+            }
+            whileHover="animate"
+          >
+            learn more
+          </MotionButton>
+        </motion.div>
       </div>
     </div>
   )

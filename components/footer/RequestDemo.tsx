@@ -1,9 +1,17 @@
 import { FC } from 'react'
+import { motion } from 'framer-motion'
+
+import { scaleAnimation } from '@/utils/animations'
 
 const RequestDemo: FC = () => (
-  <div
+  <motion.div
     className="absolute -top-[9.25rem] flex h-[14.375rem] w-full flex-col items-center rounded-xl bg-primary
   px-[5%] lg:flex-row"
+    variants={scaleAnimation}
+    initial="initial"
+    whileInView="final"
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
     style={{ backgroundImage: "url('/images/zig-zag.svg')" }}
   >
     <div className="py-4 font-lato text-3xl font-bold text-white lg:flex-grow lg:text-[2.5rem] lg:leading-[3.125rem] xl:min-w-[25rem]">
@@ -23,7 +31,7 @@ const RequestDemo: FC = () => (
         </button>
       </div>
     </div>
-  </div>
+  </motion.div>
 )
 
 export default RequestDemo

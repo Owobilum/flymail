@@ -12,6 +12,7 @@ import {
   dodgeBottom,
   dodgeLeft,
   dodgeTopLeft,
+  fromBottomAnimation,
 } from '@/utils/animations'
 import useButtonAnimation from '@/hooks/useMovement'
 
@@ -24,16 +25,33 @@ const Hero: FC = () => {
     <Container className=" bg-secondary py-20">
       <section className="flex flex-col gap-4 lg:flex-row lg:gap-8">
         <div className="flex flex-col justify-center lg:max-w-[400px] xl:max-w-full xl:flex-1">
-          <h1 className="relative font-openSans text-[2.75rem] font-bold capitalize leading-[3.375rem] text-white lg:text-[4.5rem] lg:leading-[4.9rem] xl:text-[5.3125rem] xl:leading-[5.9375rem]">
+          <motion.h1
+            variants={fromBottomAnimation}
+            initial="initial"
+            animate="final"
+            transition={{ delay: 0.2 }}
+            className="relative font-openSans text-[2.75rem] font-bold capitalize leading-[3.375rem] text-white lg:text-[4.5rem] lg:leading-[4.9rem] xl:text-[5.3125rem] xl:leading-[5.9375rem]"
+          >
             personalize your outreach
             <AnimatedLines className="absolute -right-2 top-[40%] hidden h-14 w-14 md:block" />
-          </h1>
-          <p className="py-[1.875rem] pb-[3.125rem] font-lato text-lg text-light_gray">
+          </motion.h1>
+          <motion.p
+            variants={fromBottomAnimation}
+            initial="initial"
+            animate="final"
+            transition={{ delay: 0.3 }}
+            className="py-[1.875rem] pb-[3.125rem] font-lato text-lg text-light_gray"
+          >
             Stop Rushing - Centralize, Prioritize And Progress On Projects
             Across Apps On A Daily Basis. SaaS Ant Replaces All Those Apps.
-          </p>
+          </motion.p>
 
-          <p>
+          <motion.p
+            variants={fromBottomAnimation}
+            initial="initial"
+            animate="final"
+            transition={{ delay: 0.4 }}
+          >
             <MotionButton
               className="my-1 mr-1 w-32 text-sm text-white hover:border-white  sm:mb-0 lg:mr-4"
               variant="contained"
@@ -67,7 +85,7 @@ const Hero: FC = () => {
             >
               learn more
             </MotionButton>
-          </p>
+          </motion.p>
         </div>
         <div className="lg:scale-90 xl:flex-1 xl:scale-100">
           <ImageGrid />

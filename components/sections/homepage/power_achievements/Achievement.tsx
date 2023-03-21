@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, forwardRef, Ref } from 'react'
 import Image from 'next/image'
 
 const Achievement: FC<{
@@ -6,11 +6,11 @@ const Achievement: FC<{
   figure: string
   icon: any
   iconColor?: string
-}> = (props) => {
+}> = forwardRef(function _Achievement(props, ref: Ref<HTMLDivElement>) {
   const { title, figure, icon, iconColor = 'bg-primary' } = props
 
   return (
-    <div className="flex items-center gap-4 xl:gap-8">
+    <div className="flex items-center gap-4 xl:gap-8" ref={ref}>
       <div>
         {' '}
         <span
@@ -30,6 +30,6 @@ const Achievement: FC<{
       </div>
     </div>
   )
-}
+})
 
 export default Achievement
