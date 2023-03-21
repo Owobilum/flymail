@@ -43,7 +43,7 @@ const Testimonial: FC<Props> = (props) => {
             </div>
           </div>
           <div>
-            <QuoteIcon color={color} />
+            <QuoteIcon fill={color} />
           </div>
         </div>
         <div className="mt-4 font-lato text-[#000230] lg:mt-6 lg:text-[1.25rem] lg:leading-7">

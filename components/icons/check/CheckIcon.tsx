@@ -1,15 +1,11 @@
 import { FC } from 'react'
 
-interface Props {
-  width?: string
-  height?: string
-  color?: string
-}
+import { IconType } from '@/types'
 
-const CheckIcon: FC<Props> = ({
+const CheckIcon: FC<IconType> = ({
   width = '24',
   height = '22',
-  color = '#FC7557',
+  fill = '#FC7557',
 }) => (
   <svg
     width={width}
@@ -20,7 +16,7 @@ const CheckIcon: FC<Props> = ({
   >
     <path
       d="M2.00195 7.00049L7.00195 12.0005L15.3353 2.00049"
-      stroke={color}
+      stroke={fill}
       strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"

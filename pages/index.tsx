@@ -10,6 +10,7 @@ import Integrations from '@/components/sections/homepage/integrations'
 import ControlUpdates from '@/components/sections/homepage/control_updates'
 import PowerAchievements from '@/components/sections/homepage/power_achievements'
 import Testimonials from '@/components/sections/homepage/testimonials'
+import Footer from '@/components/footer'
 
 const Home: NextPage = () => {
   return (
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
         <ControlUpdates />
         <PowerAchievements />
         <Testimonials />
+        <Footer />
       </main>
     </>
   )

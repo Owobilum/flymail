@@ -1,20 +1,18 @@
 import { FC } from 'react'
 
-const QuoteIcon: FC<{ height?: number; width?: number; color?: string }> = (
-  props
-) => {
-  const { width = 70, height = 49, color = '#000000' } = props
+import { IconType } from '@/types'
+
+const QuoteIcon: FC<IconType> = (props) => {
+  const { width = 70, height = 49, fill = '#000000' } = props
   return (
     <svg
-      fill={color}
+      fill={fill}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
-      // xmlns:xlink="http://www.w3.org/1999/xlink"
       width={width}
       height={height}
       viewBox="0 0 98.829 98.829"
-      //  xml:space="preserve"
     >
       <g>
         <g>

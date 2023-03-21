@@ -11,7 +11,7 @@ const Container: FC<Props> = (props) => {
     <div
       className={`${className} grid w-full place-items-center px-[5%] lg:px-[2%] xl:px-[6%]`}
     >
-      <div className="w-full  max-w-[120rem] origin-center xl:scale-90">
+      <div className="relative  w-full max-w-[120rem] origin-center xl:scale-90">
         {children}
       </div>
     </div>

@@ -19,7 +19,6 @@ function useWindowDimensions(): Size {
         width: window.innerWidth,
         height: window.innerHeight,
       })
-      console.log('RESIZED')
     }
     // Add event listener
     window.addEventListener('resize', handleResize)
