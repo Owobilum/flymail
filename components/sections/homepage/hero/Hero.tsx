@@ -22,9 +22,9 @@ const Hero: FC = () => {
   const { movement, handleCurrentMovement } = useButtonAnimation()
 
   return (
-    <Container className=" bg-secondary py-20">
-      <section className="flex flex-col gap-4 lg:flex-row lg:gap-8">
-        <div className="flex flex-col justify-center lg:max-w-[400px] xl:max-w-full xl:flex-1">
+    <Container className="bg-secondary py-8 xl:h-[88vh] 2xl:h-full">
+      <section className="flex  flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="flex flex-col justify-center lg:max-w-[25rem] xl:max-w-full xl:flex-1">
           <motion.h1
             variants={fromBottomAnimation}
             initial="initial"
@@ -32,7 +32,8 @@ const Hero: FC = () => {
             transition={{ delay: 0.2 }}
             className="relative font-openSans text-[2.75rem] font-bold capitalize leading-[3.375rem] text-white lg:text-[4.5rem] lg:leading-[4.9rem] xl:text-[5.3125rem] xl:leading-[5.9375rem]"
           >
-            personalize your outreach
+            personalize
+            <br /> your outreach
             <AnimatedLines className="absolute -right-2 top-[40%] hidden h-14 w-14 md:block" />
           </motion.h1>
           <motion.p
