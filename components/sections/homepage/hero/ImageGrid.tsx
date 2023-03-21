@@ -19,7 +19,7 @@ const ImageGrid: FC = () => (
         transition={{ duration: 0.8 }}
       >
         <MotionImage
-          alt=""
+          alt="hero image"
           src="/images/audience_builder.png"
           fill
           className="rounded-lg"
@@ -38,8 +38,8 @@ const ImageGrid: FC = () => (
         transition={{ duration: 0.8 }}
       >
         <MotionImage
-          alt=""
-          src="/images/profile.svg"
+          alt="hero image"
+          src="/images/engage.svg"
           fill
           className="rounded-lg object-cover object-center"
           variants={imgVariants}
@@ -59,7 +59,7 @@ const ImageGrid: FC = () => (
         transition={{ duration: 0.8 }}
       >
         <MotionImage
-          alt=""
+          alt="hero image"
           src="/images/send.svg"
           fill
           variants={imgVariants}
@@ -78,7 +78,7 @@ const ImageGrid: FC = () => (
         transition={{ duration: 0.8 }}
       >
         <MotionImage
-          alt=""
+          alt="hero image"
           src="/images/profiles.png"
           fill
           className="rounded-lg"
