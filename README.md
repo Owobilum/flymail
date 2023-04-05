@@ -39,8 +39,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Run Container in Development
 
-run `bash docker-compose up --build --force-recreate`
+run `docker-compose up --build --force-recreate`
 
 ## Run container in Production
 
-run `bash docker-compose -f docker-compose.production.yaml up --build --force-recreate`
+run `docker-compose -f docker-compose.production.yaml up --build --force-recreate`
