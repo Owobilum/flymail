@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  app:
+    image: flymail_prod
+    build:
+      dockerfile: Dockerfile.production
+    ports:
+      - 3000:3000
