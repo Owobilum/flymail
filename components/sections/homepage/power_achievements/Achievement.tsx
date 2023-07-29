@@ -6,7 +6,7 @@ const Achievement: FC<{
   figure: string
   icon: any
   iconColor?: string
-}> = forwardRef(function _Achievement(props, ref: Ref<HTMLDivElement>) {
+}> = forwardRef(function Achievement(props, ref: Ref<HTMLDivElement>) {
   const { title, figure, icon, iconColor = 'bg-primary' } = props
 
   return (

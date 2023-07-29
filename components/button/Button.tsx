@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren, forwardRef, Ref } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 import { classNames } from '@/utils/classNames'
 
@@ -40,12 +41,14 @@ const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(function _Button(
     <button
       {...restProps}
       ref={ref}
-      className={classNames(
-        className,
-        VARIANT_MAPS[variant],
-        COLOR_SCHEME_MAP[colorScheme],
-        SIZE_MAP[size],
-        'btn'
+      className={twMerge(
+        classNames(
+          VARIANT_MAPS[variant],
+          COLOR_SCHEME_MAP[colorScheme],
+          SIZE_MAP[size],
+          'btn',
+          className
+        )
       )}
     >
       {children}
